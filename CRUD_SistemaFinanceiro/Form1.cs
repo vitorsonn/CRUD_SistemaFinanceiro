@@ -19,6 +19,8 @@ namespace CRUD_SistemaFinanceiro
             dataGridView1.DataSource = dt;
 
             decimal saldo = 0;
+            decimal entrada = 0;
+            decimal saida = 0;
 
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -28,9 +30,18 @@ namespace CRUD_SistemaFinanceiro
                 string tipo = row.Cells["tipo"].Value.ToString().Trim();
 
                 if (tipo == "entrada")
+                {
                     saldo += valor;
+                    entrada += valor;
+                    lblEntrada.Text = "Total de entradas: " + entrada.ToString();
+                }
+
                 else if (tipo == "saida")
+                {
                     saldo -= valor;
+                    saida += valor;
+                    lblSaida.Text = "Total de saídas: " + saida.ToString();
+                }
 
                 lblSaldo.Text = "Saldo atual: " + saldo.ToString();
             }
@@ -59,7 +70,7 @@ namespace CRUD_SistemaFinanceiro
                 MessageBox.Show("Erro ao cadastrar lançamento");
             }
 
-         
+
 
 
         }

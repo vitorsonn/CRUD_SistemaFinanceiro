@@ -51,6 +51,9 @@
             btnFiltrar = new Button();
             btnConsultarUP = new Button();
             lblSaldo = new Label();
+            label8 = new Label();
+            lblEntrada = new Label();
+            lblSaida = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -246,17 +249,46 @@
             // lblSaldo
             // 
             lblSaldo.AutoSize = true;
-            lblSaldo.Location = new Point(172, 404);
+            lblSaldo.Location = new Point(162, 402);
             lblSaldo.Name = "lblSaldo";
             lblSaldo.Size = new Size(36, 15);
             lblSaldo.TabIndex = 22;
             lblSaldo.Text = "Saldo";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(164, 438);
+            label8.Name = "label8";
+            label8.Size = new Size(0, 15);
+            label8.TabIndex = 23;
+            // 
+            // lblEntrada
+            // 
+            lblEntrada.AutoSize = true;
+            lblEntrada.Location = new Point(162, 435);
+            lblEntrada.Name = "lblEntrada";
+            lblEntrada.Size = new Size(52, 15);
+            lblEntrada.TabIndex = 24;
+            lblEntrada.Text = "Entradas";
+            // 
+            // lblSaida
+            // 
+            lblSaida.AutoSize = true;
+            lblSaida.Location = new Point(164, 467);
+            lblSaida.Name = "lblSaida";
+            lblSaida.Size = new Size(35, 15);
+            lblSaida.TabIndex = 25;
+            lblSaida.Text = "Saida";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1144, 597);
+            Controls.Add(lblSaida);
+            Controls.Add(lblEntrada);
+            Controls.Add(label8);
             Controls.Add(lblSaldo);
             Controls.Add(btnConsultarUP);
             Controls.Add(btnFiltrar);
@@ -312,5 +344,8 @@
         private Button btnFiltrar;
         private Button btnConsultarUP;
         private Label lblSaldo;
+        private Label label8;
+        private Label lblEntrada;
+        private Label lblSaida;
     }
 }
